@@ -6,9 +6,10 @@ $(document).ready(function(){
             type:'POST',
             url:'servletInsertarusuario',
             data:{
-                id:$('#id').val(),
-                nombre:$('#nombre').val(),
-                sueldo:$('#sueldo').val()
+                nombre:$('nombre').val(),
+                mail:$('#mail').val(),
+                asunto:$('#asunto').val(),
+                contenido:($('#contenido').val())
             },
             success:function(respuesta){
                 $('#resultado').html(respuesta);
