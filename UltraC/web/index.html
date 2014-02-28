@@ -43,12 +43,12 @@
                                 
             <div id="formulario">
               <h3 id="form-titulo">24/7 Contact</h3>
-              <form action="mailer.php" method="POST">
+              <form action="mailto.php" method="POST">
                 <input type="text" id="nombre" placeholder="Name"/>
                 <input type="text" id="mail" placeholder="Email"/>
                 <input type="text" id="asunto" placeholder="Subject"/>
                 <textarea name="Message" cols="24" rows="5" id="contenido" placeholder="Message" ></textarea>
-                <input type="button" id="enviar" value="Send"/>
+                <input type="button" id="enviar" name="enviar" value="Send"/>
               </form>
               <div id="resultado"></div>
             </div>
