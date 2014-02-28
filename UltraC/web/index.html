@@ -11,10 +11,13 @@
     <link rel="stylesheet" href="estilos/normalize.css" /> 
     <link rel="stylesheet" href="estilos/estilo.css">  <!-- Estilos -->
     <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="js/acciones.js"></script>
   </head>
-  <body>
- 	<div class="contenedor"> <!--contenedor principal -->
+  <body onload="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+      
+      <div id="light" class="white_content"><iframe title="YouTube video player" width="500" height="405" src="http://www.youtube.com/embed/QykR-W3HsHU?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe> <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">Close</a></div>
+	        <div id="fade" class="black_overlay"></div>
+         
+ 	<div class="contenedor"> <!-- contenedor principal -->
  		<header >
         <figure><a href="index.html" alt="Clayton"><img src="img/logo.png" width="100%" height="100%"></a></figure>
                                 <ul id="left-menu">
@@ -40,15 +43,29 @@
                                 
             <div id="formulario">
               <h3 id="form-titulo">24/7 Contact</h3>
-              <form>
+              <form action="mailer.php" method="POST">
                 <input type="text" id="nombre" placeholder="Name"/>
                 <input type="text" id="mail" placeholder="Email"/>
                 <input type="text" id="asunto" placeholder="Subject"/>
-                <textarea name="Message" cols="24" rows="5" id="contenido" placeholder="Message"></textarea>
+                <textarea name="Message" cols="24" rows="5" id="contenido" placeholder="Message" ></textarea>
                 <input type="button" id="enviar" value="Send"/>
-                </form>
+              </form>
               <div id="resultado"></div>
             </div>
+        <div class="redes-sociales">
+            <figure class="boton-rs">
+                    <a href="#"><img src="img/fb.png" height="100% " width="100%" /></a>
+            </figure>
+            <figure class="boton-rs">
+                    <a href="#"><img src="img/tw.png" height="100% " width="100%" /></a>
+            </figure>
+            <figure class="boton-rs">
+                    <a href="#"><img src="img/yt.png" height="100% " width="100%" /></a>
+            </figure>
+            <figure class="boton-rs">
+                    <a href="#"><img src="img/intranet.png" height="100% " width="100%" /></a>
+            </figure>
+        </div>
     </header>
  		<nav class="menu">
  			<ul>
@@ -96,7 +113,6 @@
  				<li><a href="#">Privacy note</a></li>
  				<li><a href="#">Quality Approvals</a></li>
  			</ul>
- 			<div><a href="#"><img src="img/intranet.png" height="100% " width="100%" /></a></div>
  			<p><span>Clayton de México S.A. de C.V.</span> Manuel L. Stampa No. 54 Col. Nueva Industrial Vallejo, México, D.F., C.P. 07700, Tel: (55) 5586 5100 <br> © 2013 | Clayton de México | All Rights Reserved</p>
  		</footer>
  	</div> <!-- Fin del Contenedor -->
