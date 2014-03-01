@@ -270,7 +270,7 @@ footer p span{
 /*estilos del lightbox*/
 .black_overlay{
 	            display: none;
-	            position: absolute;
+	            position: fixed;
 	            top: 0%;
 	            left: 0%;
 	            width: 100%;
@@ -285,7 +285,7 @@ footer p span{
 	            display: none;
 	            position: absolute;
                     bottom:10%;
-                    right:12%;              
+                    right:10%;              
 	            width: 81%;
 	            height: 73%;
 	            padding: 16px;
