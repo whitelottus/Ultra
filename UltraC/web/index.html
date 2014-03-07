@@ -11,11 +11,27 @@
     <link rel="stylesheet" href="estilos/normalize.css" /> 
     <link rel="stylesheet" href="estilos/estilo.css">  <!-- Estilos -->
     <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/caja.js"></script>
+    <link rel="stylesheet" href="estilos/jquery.fancybox.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+    <link rel="stylesheet" href="estilos/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
+    <link rel="stylesheet" href="estilos/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
+   
+    <script type="text/javascript">
+  $(document).ready(function() {
+    $(".fancybox").fancybox();
+  });
+</script>  
+    
+    
+
   </head>
-  <body onload="document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+  <body>
       <!--esta es la pop-up co video-->
-      <div id="light" class="white_content"><iframe title="YouTube video player" id="reprodu" width="500" height="405" src="http://www.youtube.com/embed/QykR-W3HsHU?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe> <a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><br>Close</a></div>
-	        <div id="fade" class="black_overlay"></div>
+      <div id="light" class="white_content"> <a href="javascript:void(0)" class="close" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><br>Close</a></div>
+      <a href="javascript:void(0)" class="close" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><div id="fade" class="black_overlay"></div></a>
          
  	<div class="contenedor"> <!-- contenedor principal -->
  		<header >
@@ -39,6 +55,7 @@
                                     <li><a href="#">PRODUCT FOCUS</a></li>
                                     <li><a href="#">NEW SIGMA FIRE SIZE</a></li>
                                     <li><a href="#">INDUSTRY FOCUS</a></li>
+                                    <li><a class="fancybox">Show me the lightbox</a></li>
                                 </ul>
                                 
             <div id="formulario">
