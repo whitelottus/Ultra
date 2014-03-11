@@ -11,34 +11,23 @@
     <link rel="stylesheet" href="estilos/normalize.css" /> 
     <link rel="stylesheet" href="estilos/estilo.css">  <!-- Estilos -->
     <script src="js/jquery-1.9.1.min.js"></script>
-    <script src="js/caja.js"></script>
-    <link rel="stylesheet" href="estilos/jquery.fancybox.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
-    <link rel="stylesheet" href="estilos/jquery.fancybox-buttons.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
-    <link rel="stylesheet" href="estilos/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
-    <script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
-   
-    <script type="text/javascript">
-  $(document).ready(function() {
-    $(".fancybox").fancybox();
-  });
-</script>  
-    
-    
-
+ 
   </head>
-  <body>
+  
+  
+  <!-- cuerpo metodo para cargar al inicio= "contador ( funcion {$('llamas al boton por id').gatillo('click');} tiempo de segundos en miles (no se por q en miles); metodos de lightbox-->
+  <body onload="setTimeout( function() {$('#cerrar').trigger('click'); },4000);document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
       <!--esta es la pop-up co video-->
-      <div id="light" class="white_content"> <a href="javascript:void(0)" class="close" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><br>Close</a></div>
-      <a href="javascript:void(0)" class="close" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><div id="fade" class="black_overlay"></div></a>
+      <div id="light" class="white_content"><h2 id="welcometext">Bienvenido / <strong>Welcome</strong></h2><iframe title="YouTube video player" id="reprodu" width="640" height="360" src="http://www.youtube.com/embed/GZj3Hw7On-0?rel=0&autoplay=1&controls=0&showinfo=0" frameborder="0"  allowfullscreen></iframe><h3 id="text-w">Especialistas en Generación de vapor y agua caliente</h3> <ul id="welcome-list"><li>Asesoría</li><li>Proyectos</li><li>Fabricación</li><li>Instalación</li><li>Mantenimiento</li></ul><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><div id="cerrar">Close / Cerrar    <strong>X</strong></div></a></div>
+      <a onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"> <div id="fade" class="black_overlay"></div></a>
+
          
  	<div class="contenedor"> <!-- contenedor principal -->
  		<header >
         <figure><a href="index.html" alt="Clayton"><img src="img/logo.png" width="100%" height="100%"></a></figure>
                                 <ul id="left-menu">
-                                    <li><a href="#">HOME</a></li>
-                                    <li><a href="#">PRODUTS</a></li>
+                                    <li><a href="index.html">HOME</a></li>
+                                    <li><a href="products.html">PRODUCTS</a></li>
                                     <li><a href="#">DESIGN FEATURES</a></li>
                                     <li><a href="#">DESIGN ADVANTAGES</a></li>
                                     <li><a href="#">QUALITY APPROVALS</a></li>
@@ -55,7 +44,6 @@
                                     <li><a href="#">PRODUCT FOCUS</a></li>
                                     <li><a href="#">NEW SIGMA FIRE SIZE</a></li>
                                     <li><a href="#">INDUSTRY FOCUS</a></li>
-                                    <li><a class="fancybox">Show me the lightbox</a></li>
                                 </ul>
                                 
             <div id="formulario">
@@ -86,7 +74,7 @@
     </header>
  		<nav class="menu">
  			<ul>
- 				<li><a href="#">Products</a></li><!--
+ 				<li><a href="products.html">Products</a></li><!--
  				--><li><a href="#">Design Features</a></li><!--
  				--><li><a href="#">Design Advantages</a></li><!--
  				--><li><a href="#">Customer Service</a></li><!--

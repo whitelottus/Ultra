@@ -1,22 +1,22 @@
 body {
 	margin: 0px 0px 0px 0px;
 	padding: 0px;
-	background:url(img/bg.jpg)  no-repeat;
-	background-position: center;
-	background-size: 100%;
+	background:url(../img/bg.jpg)  no-repeat;
+	background-position: top center;
+	background-size: 1920px;
 }
-.contenedor {
+.contenedor {	/*contenedor general */
 	min-width: 1220px;
 	max-width: 1600px;
 	height: 850px;
 	margin: 0 auto;
 	position: relative;
 	clear:both;
-	background: url(img/bg-c.jpg) no-repeat;
-	background-position: center;
-	box-shadow: 0px 5px 4px rgba(100,100,100, 0.7);
+	background: url(../img/bg-c.jpg) no-repeat;
+	background-position: top center;
+	
 }
-header {
+header {	/* sección lateral */
 	display: inline-block;
 	float: left;	
 	width: 17%;
@@ -50,6 +50,8 @@ header figure img {
 	height: auto;
 	width: 90%;
 	border-radius: 20px;
+	-webkit-border-radius: 20px; 
+  	-moz-border-radius: 20px;
 	border: 1px solid red;
 	margin: 15px auto;
 	display: block;
@@ -68,6 +70,8 @@ header figure img {
 #nombre, #mail, #asunto, #contenido, #enviar{
 	padding: 2px;
 	border-radius: 7px;
+	-webkit-border-radius: 7px; 
+  	-moz-border-radius: 7px;
 	margin: 3px auto;
 	display: block;
 	padding: 4px;
@@ -91,7 +95,7 @@ header figure img {
  	font-weight: bolder;
  	background-color: rgba(0,0,0,0.1);
 }
-.redes-sociales {
+.redes-sociales {	/*sección redes sociales */
 	padding: 15px 0;
 	margin: 0 auto;
 	width: 100%;
@@ -128,6 +132,8 @@ header figure img {
 	background-color: #008081;
 	padding: 7px 0;
 	border-radius: 0px 0px 9px 9px; 
+	-webkit-border-radius: 0px 0px 9px 9px; 
+  	-moz-border-radius: 0px 0px 9px 9px;
 	font-size: 22px;
 	width: 19.5%;
 	text-align: center;
@@ -148,14 +154,14 @@ header figure img {
 	padding: 0px 0px;
 	
 }
-.main {
+.main {  /* sección principal cambiante */
 	height: 700px;
 	overflow: hidden;
 	width: 79%;
-	padding: 5px 10px;
+	padding: 10px 10px;
 	position: relative;
 	top: 50px;
-	background:url(img/mapa.png)  no-repeat;
+	background:url(../img/mapa.png)  no-repeat;
 	background-size: 100%;
 	background-position: center;
 	display: inline-block;
@@ -174,6 +180,47 @@ header figure img {
 	left: 0;
 }
 .item-gde figcaption {
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px; 
+	margin: 0px;
+	padding: 0px;
+}
+/*detalles*/
+
+.details-desc {
+	display: inline-block;
+	color: gray;
+	width: 45%;
+	margin: 11% 0;
+	vertical-align: center;
+	text-align: left;
+}
+.details-desc h3 {
+	font-size: 18px; 
+	font-weight: lighter;
+}
+.item-full {
+	margin: 3% 0;
+	width: 50%;
+	display: inline-block;
+	float: left;
+	
+}
+/*items productos*/
+
+.item-med {
+	display: inline-block;
+	width: 24%;
+	margin: 5px 2px 0px 2px;
+	height: auto;
+
+}
+.item-med img {
+	position: relative;
+	left: 0;
+}
+.item-med figcaption {
 	text-align: center;
 	font-weight: bold;
 	font-size: 12px; 
@@ -231,6 +278,8 @@ footer ul li {
 	padding: 5px 30px;	
 	background-color: rgba(0,0,0, 0.2);
 	border-radius: 15px;
+	-webkit-border-radius: 15px; 
+  	-moz-border-radius: 15px;
 	box-shadow: 4px 3px 1px rgba(0,0,0, 0.1);
 }
 
@@ -241,6 +290,8 @@ footer ul li:hover {
 	padding: 5px 30px;	
 	background-color: rgba(0,0,0, 0.4);
 	border-radius: 15px;
+	-webkit-border-radius: 15px; 
+  	-moz-border-radius: 15px;
 	box-shadow: 4px 3px 6px rgba(0,0,0, 0.2);
 	transition: 0.3s ease;
 }
@@ -267,36 +318,93 @@ footer p span{
 	color: red;
 	font-weight: bold;
 }
-/*estilos del lightbox*/
-#lightbox {
-	position: absolute;
-	top: 0;
-	left: 50%;
-	width: 500px;
-	margin-left: -250px;
-	background: #fff;
-	z-index: 1001;
-	display: none;
-}
-#lightbox-shadow {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #000;
-	filter: alpha(opacity=75);
-	-moz-opacity: 0.75;
-	-khtml-opacity: 0.75;
-	opacity: 0.75;
-	z-index: 1000;
-	display: none;
-}
+
+/*estilos del lightbox (video intro)*/
+
+.black_overlay{
+	            display: none;
+	            position: fixed;
+	            top: 0%;
+	            left: 0%;
+	            width: 100%;
+	            height: 100%;
+	            background-color: black;
+	            z-index:1001;
+	            -moz-opacity: 0.8;
+	            opacity:.75;
+	            filter: alpha(opacity=80);
+	        }
+	        .white_content {
+	            display: none;
+	            position: absolute;
+                bottom:0;
+                right:0; 
+                top: 0;
+                left: 0;  
+                margin: 20px auto;           
+	            width: 900px;
+	            height: 530px;
+	            padding: 16px;
+                border: 16px;
+	            background-color: white;
+	            z-index:1002;
+	            overflow: auto;
+	    
+	        }
                 
                 #reprodu{
                     
                     position: relative;
-                    top:5%;
-                    left:32%;
+                    top: 0;
+                    left:0;
+                    right: 0;
+                    margin: 0 auto;
+                    display: block;
                     
                 }
+            #cerrar {
+            	position: absolute;
+            	background: url(../img/close.png) no-repeat;
+            	background-position: top left;
+            	top: 0;
+            	right: 0;
+            	padding: 4px 7px 4px 30px;
+            	color: white; 
+            	font-size: 14px;
+            }
+            #light h2{
+            	text-align: center;
+            	margin: 10px auto 5px auto;
+            	font-size: 30px;
+            	font-weight: bold;
+            }
+            #light h3{
+            	text-align: center;
+            	margin: 15px auto 10px auto;
+            	font-weight: medium;
+            }
+            #light ul{
+            	list-style: none;
+            	width: 100%;
+            	height: auto;
+            	display: block;
+            	margin: 0 auto 0 auto;
+            	text-align: center;
+            	position: absolute;
+            	overflow: hidden;
+            	left: -45px;
+
+            }
+            #light li{
+            	display: inline-block;
+            	text-align: center;
+            	margin: 0 3px;
+            	padding: 5px 15px;
+            	background-color: red;
+            	color: white;
+            	position: relative;
+            	border: 1px solid red;
+            	font-size: 25px;
+
+
+            }

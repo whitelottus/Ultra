@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['enviar'])) {
 
-$to = "forcelottus@gmail.com";
+$to = "ventas@clayton.com.mx";
 $subject = 'asunto';
  
 $name_field = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING);
@@ -18,7 +18,7 @@ mail($to, $subject, $body);
 
 } else {
 
-// el erroooooooor
+// error
 
 }
 ?> 
