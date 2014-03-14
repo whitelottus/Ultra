@@ -11,12 +11,24 @@
     <link rel="stylesheet" href="estilos/normalize.css" /> 
     <link rel="stylesheet" href="estilos/estilo.css">  <!-- Estilos -->
     <script src="js/jquery-1.9.1.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+    var visited = $.cookie('visited');
+    if (visited == 'yes') {
+        return false;
+    } else {
+    }
+    $.cookie('visited', 'yes', { expires: 1 });
+    $('#cerrar').trigger('click');
+});
+    </script>
  
   </head>
   
   
   <!-- cuerpo metodo para cargar al inicio= "contador ( funcion {$('llamas al boton por id').gatillo('click');} tiempo de segundos en miles (no se por q en miles); metodos de lightbox-->
-  <body onload="setTimeout( function() {$('#cerrar').trigger('click'); },4000);document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
+  <body onload="setTimeout( function() {$('#cerrar').trigger('click'); },6000);document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">
       <!--esta es la pop-up co video-->
       <div id="light" class="white_content"><h2 id="welcometext">Bienvenido / <strong>Welcome</strong></h2><iframe title="YouTube video player" id="reprodu" width="640" height="360" src="http://www.youtube.com/embed/GZj3Hw7On-0?rel=0&autoplay=1&controls=0&showinfo=0" frameborder="0"  allowfullscreen></iframe><h3 id="text-w">Especialistas en Generación de vapor y agua caliente</h3> <ul id="welcome-list"><li>Asesoría</li><li>Proyectos</li><li>Fabricación</li><li>Instalación</li><li>Mantenimiento</li></ul><a href="javascript:void(0)" onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"><div id="cerrar">Close / Cerrar    <strong>X</strong></div></a></div>
       <a onclick="document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'"> <div id="fade" class="black_overlay"></div></a>
@@ -48,7 +60,7 @@
                                 
             <div id="formulario">
               <h3 id="form-titulo">24/7 Contact</h3>
-              <form action="mailto.php" method="POST">
+              <form name="mailto" action="mailto.php" method="post">
                 <input type="text" id="nombre" placeholder="Name"/>
                 <input type="text" id="mail" placeholder="Email"/>
                 <input type="text" id="asunto" placeholder="Subject"/>
